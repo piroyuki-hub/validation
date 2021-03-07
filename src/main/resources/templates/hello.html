@@ -12,6 +12,12 @@
     好きな文字を入力：
   <input type="text" th:field="*{hoge}" />
   <input type="submit" value="クリック" />
+
+  <ul>
+    <li th:each="error : ${#fields.detailedErrors()}">
+      <span th:text="${error.message}">error message</span>
+    </li>
+  </ul>
   </form>
 </body>
 </html>
